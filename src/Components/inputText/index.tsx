@@ -15,7 +15,7 @@ export const InputText = () => {
     useEffect(() => {
         if (_time !== 60 && _time !== 0)
             setTimeout(() => dispatch(timeChange()), 1000)
-    }, [_time])
+    }, [_time, dispatch])
 
     const _onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 

@@ -13,7 +13,7 @@ export const InputText = () => {
     const _time = useAppSelector((e) => e.words.time)
 
     useEffect(() => {
-        if (_time !== 60 && _time !== 0)
+        if (_time !== 60 && _time > 0)
             setTimeout(() => dispatch(timeChange()), 1000)
     }, [_time, dispatch])
 
